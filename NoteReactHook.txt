@@ -25,3 +25,23 @@ Reason 3
 
 Hooks let you slit into one component into smaller functions based on what pieces are related.
 
+useState Hook 
+-import useState
+-pass it in a default value
+-assign return pair of value
+-use them in a render function
+
+Rules of Hooks
+1."Only Call Hooks at the Top Level", Don't call Hooks inside loops, conditions, or nested functions.
+2."Only Call Hooks from React Functions", Call them from within React functional components and not just any regular JS function.
+
+With Previous State => setValue((prevValue) => prevValue - ...)
+-A state variable can be string, number, boolean, object, or array
+-In object, when assigning to the value just use the spread operator ...object, the thing that you want to change.
+-In array, spread the array and append the array with the new value.
+
+-The useState hook lets you add state to functional components
+-With the useState hook, the state can be anything.
+-The useState hook returns an array with 2 elements. 1. the current value 2. a state setter function.
+-New state value depends on the previous state value? You can pass a function to the setter function.
+-When dealing with objects or arrays, always make sure to spread your state variable and then call the setter function.
