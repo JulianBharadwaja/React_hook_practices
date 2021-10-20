@@ -80,3 +80,21 @@ Context
 3.Consume the value
 -useContext hook only make the consumption of the context value simpler.
 => How? creating and providing the value remain the same. 1. import useContext from react, 2. import necessary context. 3. call the useContext function passing in the context as its arguments. useContext returns a context value. ***value ={''}
+
+useReducer
+
+-useReducer is a hook that is used for state management.
+-It is an alternative to useState.
+
+What is the different between useState and useReducer?
+-useReducer is more primitive hook than useState.
+-useReducer is related to reducer.
+-useReducer is changing a state in React components.
+
+reduce vs useReducer
+-reduce in JS                                  | -useReducer in React
+-array.reduce(reducer, initialValue)           | -useReducer(reducer, initialState)
+-singleValue = reducer(accumulator, itemValue) | -newState = reducer(currentState, action)
+-reduce method returns a single value          | -useReducer returns a pair of values. [newState, dispatch]
+
+When should I use useReducer vs useState? 
