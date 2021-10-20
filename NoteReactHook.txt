@@ -72,3 +72,11 @@ useEffect with cleanup => (componentWillUnMount). When you unmount the component
 
 Fetching Data with useEffect <= use axios in the useEffect. 
 Fetching Data Individual with id <= /id 
+
+Context
+-Provides a way to pass data through the component tree without having to pass props down manually at every level.
+1.create UserContext 
+2.Provide a value to the context. Provider has to wrap the component.
+3.Consume the value
+-useContext hook only make the consumption of the context value simpler.
+=> How? creating and providing the value remain the same. 1. import useContext from react, 2. import necessary context. 3. call the useContext function passing in the context as its arguments. useContext returns a context value. ***value ={''}
