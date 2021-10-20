@@ -1,11 +1,11 @@
 import "./App.css";
 
-import HookCounterFour from "./components/useStateHook/HookCounterFour";
+import DataFetching from "./components/useEffectHook/DataFetching";
 
 function App() {
   return (
     <div className="App">
-      <HookCounterFour />
+      <DataFetching />
     </div>
   );
 }

@@ -45,3 +45,30 @@ With Previous State => setValue((prevValue) => prevValue - ...)
 -The useState hook returns an array with 2 elements. 1. the current value 2. a state setter function.
 -New state value depends on the previous state value? You can pass a function to the setter function.
 -When dealing with objects or arrays, always make sure to spread your state variable and then call the setter function.
+
+useEffect 
+-The effect hook lets you perform side effects in functional components.
+-It is a close replacement for the componentDidMount, componentDidUpdate, and componentWillMount.
+-Passed in a function as a parameter and this function will execute after render of the component.
+-useEffect has to be placed in the component because it can access the state and props without write any additional codes.
+
+Conditionally run useEffect => for conditionally executing an effect, we passed in a second parameter. it is an array. In that array, we need to specify either prop or state,
+that we need to watch for. 
+
+-Effect will be called after render of the component unless you specify the dependency array. []
+
+Run the effects only once. By simplifying the empty array. Only on initial render.
+
+useEffect with cleanup => (componentWillUnMount). When you unmount the component, make sure you cancel all the subscriptions and listeners. Clean up after your component.
+-Whatever you return in the function of useEffect, it is the cleanup function.
+-When you want to execute some component cleanup code, you include it in the function and return the function from the function pass the useEffect. The clean code can be cancelling subscriptions, timers and removing eventListeners.
+
+-If you think dependency array is a way to specify when you want to rerun the effect. <= This is gonna be a problem. Instead, dependency array should be thought of as a way to let React know about everything the effect must watch for changes.
+-By announcing the prevState, you can keep track of the previous value. You can leave the empty array in the dependency array.
+
+-Whenever you try to leave the dependency array empty, please make sure you really do not have any.
+-Whenever you try to call function from useEffect, you can leave the function inside the useEffect. <= This way when you read through the useEffect, you are much more like to see a prop or state which have to specify as dependency.
+-If you have multiple useEffect to run, make sure you separate them out rather than having all the code in a single useEffect.
+
+Fetching Data with useEffect <= use axios in the useEffect. 
+Fetching Data Individual with id <= /id 
