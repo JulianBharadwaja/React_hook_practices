@@ -1,6 +1,6 @@
 import "./App.css";
 
-import HookTimer from "./components/useRefHook/HookTimer";
+import HobbySelect from "./components/useCustomHook/HobbySelect";
 import React from "react";
 
 // export const CounterContext = React.createContext();
@@ -26,7 +26,7 @@ function App() {
     //   value={{ countState: count, countDispatch: dispatch }}
     // >
     <div className="App">
-      <HookTimer />
+      <HobbySelect />
     </div>
     // </CounterContext.Provider>
   );

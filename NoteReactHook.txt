@@ -170,3 +170,15 @@ useRef
 -It can be stored any mutable value. 
 What is great about useRef?
 -It let the value passes through the re-render while also not causing any additional re-render when the value changes.
+
+Custom Hooks
+-Building your own hook.
+-A custom hook is basically a JS function whose name starts with "use".
+-A custom hook can also call other Hook if required.
+
+Why?
+Share Logic - Alternative to HOCs and Render Props.
+
+How to create custom hooks?
+-We are reusing logic instead of duplicating.
+What are custom hooks has to do with encapsulate this control component behavior for input elements. That is binding value and onChange attribute.
