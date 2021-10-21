@@ -1,5 +1,6 @@
 import "./App.css";
 
+import Counter from "./components/useMemoHook/Counter";
 import ParentComponent from "./components/useCallbackHook/ParentComponent";
 import React from "react";
 
@@ -26,7 +27,7 @@ function App() {
     //   value={{ countState: count, countDispatch: dispatch }}
     // >
     <div className="App">
-      <ParentComponent />
+      <Counter />
     </div>
     // </CounterContext.Provider>
   );

@@ -154,4 +154,15 @@ How?
 -call useCallback 
 -it accepts the callback function as first parameter and the array of dependencies as second parameter.
 
+useMemo
+-need a way to tell React not to re-render when unnecessary. 
+-useMemo is a hook that will only re-compute the catache value when one of the dependencies has changed. 
+-It accepts function as a first parameter which return needed to be catache and second parameter accepts dependencies array.
+
 When to use useCallback and useMemo => https://kentcdodds.com/blog/usememo-and-usecallback
+-usecallback => catches the provided function instance itself
+-usememo => invoke the provided function and catche the result.
+-When you need to catche function use callback and when you need to catche the result of the invoked function use memo.
+
+useRef 
+-This hook make it possible to access DOM nodes directly within functional components.
