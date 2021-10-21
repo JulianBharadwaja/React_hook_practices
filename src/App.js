@@ -1,6 +1,6 @@
 import "./App.css";
 
-import DataFetchingTwo from "./components/useReducerHook/DataFetchingTwo";
+import ParentComponent from "./components/useCallbackHook/ParentComponent";
 import React from "react";
 
 // export const CounterContext = React.createContext();
@@ -26,7 +26,7 @@ function App() {
     //   value={{ countState: count, countDispatch: dispatch }}
     // >
     <div className="App">
-      <DataFetchingTwo />
+      <ParentComponent />
     </div>
     // </CounterContext.Provider>
   );

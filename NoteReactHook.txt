@@ -133,4 +133,25 @@ Scenario                    |  useState                    |  useReducers
 -Business Logic             | -No business logic           | -Complex business logic
 -local vs global            | -Local                       | -Global
 
+Performance Optimization 
+-Too improved performance optimization, we need to restrict re-render to only components that need to re-render.
+-React.memo is the answer. It is higher hierarchical component that will prevent functional components from being re-render if the prop or state do not change. 
+-function is created each time the parent component is re-render. When dealing with functions, we always have to consider references equality. Even though two functions have the exact same behavior, it does not mean it is equivalent to each other. So the function before the re-render is different from the function after the re-render. 
+-Since the function is a prop, react.memo sees that the prop has changed and will not prevent the re-render.
+
+How do we tell React that we do not need to create new function when we update the value?
+-useCallback is the answer for it.
+
 useCallback Hook
+-useCallback is a hook that will return a memorized version of the callback function that only changes if one of the dependencies has changed.
+-It will catch the function and return that if value is not changed.
+
+Why?
+-It is useful when passing callbacks to optimized child components that rely on reference equality to prevent unnecessary renders. 
+
+How?
+-import useCallback 
+-call useCallback 
+-it accepts the callback function as first parameter and the array of dependencies as second parameter.
+
+When to use useCallback and useMemo => https://kentcdodds.com/blog/usememo-and-usecallback
