@@ -1,7 +1,6 @@
 import "./App.css";
 
-import Counter from "./components/useMemoHook/Counter";
-import ParentComponent from "./components/useCallbackHook/ParentComponent";
+import HookTimer from "./components/useRefHook/HookTimer";
 import React from "react";
 
 // export const CounterContext = React.createContext();
@@ -27,7 +26,7 @@ function App() {
     //   value={{ countState: count, countDispatch: dispatch }}
     // >
     <div className="App">
-      <Counter />
+      <HookTimer />
     </div>
     // </CounterContext.Provider>
   );
