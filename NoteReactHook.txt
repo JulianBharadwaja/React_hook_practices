@@ -121,4 +121,16 @@ useReducers with useContext
 2. Provide and consume the reducer context in the require component.
 3. Provide a value with an object with a key
 
+Fetching Data with useReducers.
+1.Group the related states in one place.
+2.At the same time, the state transition are grouped together.
+
 When should I use useReducer vs useState? 
+Scenario                    |  useState                    |  useReducers
+-Type of state              | -number, string, boolean     | -Object, Array
+-Number of state transition | -one or two                  | -Too many
+-Related state transitions? | -No                          | -Yes 
+-Business Logic             | -No business logic           | -Complex business logic
+-local vs global            | -Local                       | -Global
+
+useCallback Hook
