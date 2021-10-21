@@ -1,19 +1,40 @@
 import "./App.css";
 
-import ComponentC from "./components/useContextHook/ComponentC";
-import React from "react";
+import React, { useReducer } from "react";
 
-export const UserContext = React.createContext();
-export const ChannelContext = React.createContext();
+import ComponentA from "./components/useReducerHook/ComponentA";
+import ComponentB from "./components/useReducerHook/ComponentB";
+import ComponentC from "./components/useReducerHook/ComponentC";
+
+export const CounterContext = React.createContext();
+
+const initialState = 0;
+const reducer = (state, action) => {
+  switch (action) {
+    case "increment":
+      return state + 1;
+    case "decrement":
+      return state - 1;
+    case "reset":
+      return initialState;
+    default:
+      return state;
+  }
+};
+
 function App() {
+  const [count, dispatch] = useReducer(reducer, initialState);
   return (
-    <div className="App">
-      <UserContext.Provider value={"Julian"}>
-        <ChannelContext.Provider value={"Echizen Gaming"}>
-          <ComponentC />
-        </ChannelContext.Provider>
-      </UserContext.Provider>
-    </div>
+    <CounterContext.Provider
+      value={{ countState: count, countDispatch: dispatch }}
+    >
+      <div className="App">
+        <h2>Count - {count}</h2>
+        <ComponentA />
+        <ComponentB />
+        <ComponentC />
+      </div>
+    </CounterContext.Provider>
   );
 }
 

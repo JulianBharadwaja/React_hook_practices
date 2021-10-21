@@ -97,4 +97,28 @@ reduce vs useReducer
 -singleValue = reducer(accumulator, itemValue) | -newState = reducer(currentState, action)
 -reduce method returns a single value          | -useReducer returns a pair of values. [newState, dispatch]
 
+1.Define Initial State.
+2.Define Reducer Method.
+3.Import and call useReducer.
+4.Get a hold of value to display in the JSX. We need a way to call the reducer with an appropriate action.
+5.useReducer return a pair of value. The current state to the value. [value, dispatch]. This dispatch method allow us to execute the code corresponding to the particular action.
+
+What is the advantage of this object complex initialState and object action?
+-Concerning the value that we need to change. By making action as an object, we can use additional data in the reducer function.
+-State as an object. Suppose we want to maintain one or more state, make a state in an object.  By using state as an object, we can track the states.
+
+Multiple useReducers
+-When dealing with multiple state variables that have the same state transition, it is a good idea to have a multiple useReducers function making use of same reducer function.
+-It prevent from duplicating code.
+-The value also independent.
+
+useReducers with useContext
+-useReducers - Local state management
+-Share state between components - Global state management.
+-Global state management can be created by combining both useReducers and useContext.
+
+1. Create a useReducers.
+2. Provide and consume the reducer context in the require component.
+3. Provide a value with an object with a key
+
 When should I use useReducer vs useState? 
